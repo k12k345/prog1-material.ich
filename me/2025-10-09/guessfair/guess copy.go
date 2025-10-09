@@ -22,9 +22,8 @@ func main() {
 		if guess > my_number {
 			fmt.Println("Die gesuchte Zahl ist kleiner.")
 		}
-	
+
 	}
-}
 
 	fmt.Println("Game Over")
 }
