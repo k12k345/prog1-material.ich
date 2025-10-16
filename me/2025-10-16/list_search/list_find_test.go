@@ -7,15 +7,31 @@ import "fmt"
 
 func Find(l []int, x int) int {
 	//TODO
-	for i, val := range l {
-		if val == x {
+	for i := 0; i < len(l); i++ {
+		if l[i] == x {
 			return i
 		}
 	}
 	return -1
-
+	//Output:
+	//2
+	//-1
 }
 
+//sucht x in l und liefert eine liste
+// mit allen vorkommen von c und l
+func FindAll(l []int, x int) []int {
+	result := []int{}
+
+	for i := 0; i < len(l); i++ {
+		result = append(result, i)
+		if l[i] == x {
+			return result
+		}
+
+		return result
+	}
+}
 func ExampleFind() {
 	l1 := []int{17, 5, 42, 25, 3, -4, 8, -23}
 
@@ -26,6 +42,7 @@ func ExampleFind() {
 	fmt.Println(pos2)
 
 	// Output:
-	//2
-	//-1
+	//[2]
+	//[]
+	//[]
 }
