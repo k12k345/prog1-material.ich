@@ -9,24 +9,19 @@ import "fmt"
 
 func FizzCompact() {
 	for i := 1; i <= 30; i++ {
-
-		// wenn i durch 3 und 5 teilbar ist, gib "fizzbuzz" aus
-		if i%5 == 0 && i%3 == 0 {
-			fmt.Println("fizzbuzz")
-
-		} else if
-		// wenn i durch 3 teilbar ist, gib "fizz" aus
-		i%3 == 0 { //% ist modula, kein rest bei rechnung
-			fmt.Println("fizz")
-		} else if
-		// wenn i durch 5 teilbar ist, gib "buzz" aus
-		i%5 == 0 {
-			fmt.Println("buzz")
-			// fmt.Printf("%10d, %v\n", i, "buzz")
-		} else {
+		//wenn i weder durch 3 noch 5 teilbar
+		if i%3 != 0 && i%5 != 0 {
 			fmt.Println(i)
+			continue
 		}
-		// sonst gib i aus
-	}
 
+		if i%3 == 0 {
+			fmt.Print("fizz")
+		}
+		if i%5 == 0 {
+			fmt.Print("buzz")
+		}
+
+		fmt.Println() // sonst gib i aus
+	}
 }
