@@ -17,3 +17,5 @@ zu ihm funtions_test.go
 &&
 scopes_test.go 
 ordner varnames 
+
+UND CONTAINS 
