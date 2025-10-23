@@ -1,3 +1,7 @@
+package varnames
+
+import "fmt"
+
 func Example_scopes_loops() {
 	x := 42
 	y := 23
@@ -11,11 +15,11 @@ func Example_scopes_loops() {
 }
 
 //scopes variable verliert gültigkeit bei schleife/funktionen, immer im scope deklarieren
-// variablen kann man neu deklarieren bei scope 
-in vorlesung 2025-10-21 varnames
-zu ihm funtions_test.go
-&&
-scopes_test.go 
-ordner varnames 
+// variablen kann man neu deklarieren bei scope
+//in vorlesung 2025-10-21 varnames
+//zu ihm funtions_test.go
+//&&
+//scopes_test.go
+//ordner varnames
 
-UND CONTAINS 
+//UND CONTAINS
