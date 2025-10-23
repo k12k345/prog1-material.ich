@@ -6,7 +6,7 @@ package searching
 //wenn x> l[mitte] dann suche im rechten teil weiter
 func BinFind1(l []int, x int) int {
 	links := 0
-	for {
+	for len(l) > 0 {
 		mitte := len(l) / 2
 		if x == l[mitte] {
 
@@ -15,14 +15,14 @@ func BinFind1(l []int, x int) int {
 		if x < l[mitte] {
 			// lasse nur den linken teil übrig
 			// alles von 0 bis exklusiv mitte
-			l = l[0:mitte]
+			l = l[:mitte]
 		} else {
 			// wenn x>l[mitte] dann suche im rechten teil
 			// lasse nur den rechten teil übrig
 			// alles von mitte+1 bis ende
-			l = l[mitte+1 : len(l)]
+			l = l[mitte+1:]
 			links += mitte + 1
 		}
-		return -1
 	}
+	return -1
 }
