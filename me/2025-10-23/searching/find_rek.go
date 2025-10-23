@@ -13,13 +13,11 @@ func BinFindRek(l []int, x int) int {
 	if x < l[mitte] {
 		return BinFindRek(l[:mitte], x)
 	}
-	if x > l[mitte] {
 
-		result := BinFindRek(l[mitte+1:], x) + mitte + 1
-		if result == -1 {
-			return -1
-		}
-		return result + mitte + 1
+	result := BinFindRek(l[mitte+1:], x) + mitte + 1
+	if result == -1 {
+		return -1
 	}
-	return -1
+	return result + mitte + 1
+
 }
